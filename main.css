@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  --primary-color: hsl(30, 38%, 92%);
+}
+
+body {
+  font-family: "Montserrat";
+  background-color: var(--primary-color);
+}
+
+main {
+  display: flex;
+  width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 12px;
+  transform: scale(0.9);
+  transform-origin: center center;
+}
+@media (width <= 480px) {
+  main {
+    flex-direction: column;
+    width: fit-content;
+    margin: 20px 0;
+  }
+}
+main .image {
+  flex: 1;
+  width: 400px;
+}
+
+main .image img {
+  width: -webkit-fill-available;
+  border-radius: 12px 0 0 12px;
+  height: 100%;
+}
+@media (width <= 480px) {
+  main .image {
+    width: 100%;
+  }
+  main .image img {
+    content: url(images/image-product-mobile.jpg);
+    border-radius: 12px 12px 0 0;
+    width: 100%;
+  }
+}
+
+main .container {
+  flex: 1;
+  padding: 0 30px;
+}
+
+main .container .perfume {
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  padding: 20px;
+  margin: 20px 0 0;
+  display: block;
+  color: #aba0a0;
+  font-size: 18px;
+}
+.container h3 {
+  font-family: "Fraunces";
+  font-size: 50px;
+  padding: 0 20px;
+}
+.container p {
+  margin: 30px 0 20px;
+  padding: 0 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #888383;
+}
+@media (width <= 480px) {
+  .container h3 {
+    font-size: 30px;
+  }
+  .container p {
+    font-size: 16px;
+    margin: 15px 0 10px;
+  }
+}
+
+.container .price {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  padding: 0 20px;
+  font-family: "Fraunces";
+}
+.container .price .mark {
+  text-decoration: line-through;
+  color: #888383;
+}
+.container .price b {
+  font-size: 40px;
+  color: hsl(158, 36%, 37%);
+  margin-right: 20px;
+}
+
+.container button {
+  margin: 20px auto;
+  width: 100%;
+  padding: 17px 20px;
+  font-size: 20px;
+  color: white;
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.container button span {
+  margin-left: 15px;
+}
+.container button:hover {
+  background-color: hsl(158, 36%, 23%);
+}
